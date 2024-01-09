@@ -50,7 +50,7 @@ elseif ( $nameid -like '*\*')
 $nameid = $nameid -replace "\\", "_"
 }
 Write-Output $nameid
-$file_save = "Y:\_Stream_Security\Nessus\script_reports\DKP\report_" + "$nameid" + "_.html"
+$file_save = "Y:\\script_reports\\report_" + "$nameid" + "_.html"
 try{
 $response_report = Invoke-RestMethod -Uri $URL_d -Method GET -Headers $headers_d | out-file $file_save
 }
